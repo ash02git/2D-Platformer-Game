@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Animator animator;
+    public ScoreController scoreController;
     public float speed;
     public float jump;
     private Rigidbody2D rb2d;
+
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
@@ -72,5 +74,11 @@ public class PlayerController : MonoBehaviour
         {
             rb2d.AddForce(new Vector2(0f, jump), ForceMode2D.Force);
         }
+    }
+
+    public void PickKey()
+    {
+        Debug.Log("Player took key");
+        scoreController.IncrementScore(10);//har coded value for key
     }
 }
