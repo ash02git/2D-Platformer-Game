@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public ScoreController scoreController;
     public LifeController lifeController;
+    public GameOverController gameOverController;
     public float speed;
     public float jump;
     private Rigidbody2D rb2d;
@@ -77,10 +78,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    
 
     public void PickKey()
     {
@@ -98,6 +96,8 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Player killed by enemy!");
         animator.SetBool("died",true);
-        RestartLevel();
+        //RestartLevel();
+        gameOverController.PlayerDied();
+        this.enabled = false;   
     }
 }
