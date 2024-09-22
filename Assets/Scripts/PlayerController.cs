@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Animator animator;
     public ScoreController scoreController;
+    public LifeController lifeController;
     public float speed;
     public float jump;
     private Rigidbody2D rb2d;
@@ -85,6 +86,12 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Player took key");
         scoreController.IncrementScore(10);//har coded value for key
+    }
+
+    public void EnemyHit()
+    {
+        Debug.Log("Player was hit by enemy");
+        lifeController.reduceLife();
     }
 
     public void KillPlayer()
