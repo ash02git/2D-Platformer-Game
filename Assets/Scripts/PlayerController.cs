@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public Animator animator;
@@ -76,9 +76,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void PickKey()
     {
         Debug.Log("Player took key");
         scoreController.IncrementScore(10);//har coded value for key
+    }
+
+    public void KillPlayer()
+    {
+        Debug.Log("Player killed by enemy!");
+        animator.SetBool("died",true);
+        RestartLevel();
     }
 }
