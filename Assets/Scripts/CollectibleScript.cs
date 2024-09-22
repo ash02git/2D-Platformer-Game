@@ -8,10 +8,15 @@ public class CollectibleScript : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
-            
+            gameObject.GetComponent<Animator>().SetBool("collected", true);
             PlayerController pc=collision.gameObject.GetComponent<PlayerController>();
             pc.PickKey();
-            Destroy(gameObject);
+            DestroyKey();
         }
+    }
+    IEnumerator DestroyKey()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 }
