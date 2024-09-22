@@ -39,7 +39,8 @@ public class EnemyController : MonoBehaviour
         {
             
             PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
-            pc.KillPlayer();
+            //pc.KillPlayer();
+            pc.EnemyHit();
         }
     }
 
