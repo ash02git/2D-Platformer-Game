@@ -419,7 +419,7 @@ Transform:
   m_GameObject: {fileID: 274012815}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.5, z: 0}
+  m_LocalPosition: {x: -2.77, y: 6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -562,8 +562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 2
-  pointA: {fileID: 867188061}
-  pointB: {fileID: 423387530}
+  pointA: {fileID: 867188062}
+  pointB: {fileID: 423387531}
 --- !u!224 &294411423 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1463158845299493397, guid: c0373df8ae8e47d4583ef11274a92fb1,
@@ -1297,8 +1297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 2
-  pointA: {fileID: 1295131250}
-  pointB: {fileID: 302210719}
+  pointA: {fileID: 1295131251}
+  pointB: {fileID: 302210720}
 --- !u!50 &514881650
 Rigidbody2D:
   serializedVersion: 4
