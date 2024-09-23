@@ -16,7 +16,11 @@ public class FallDeathController : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
             Debug.Log("Player Fell to Death");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
+            pc.KillPlayer();
+
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

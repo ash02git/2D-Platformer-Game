@@ -6,16 +6,13 @@ using UnityEngine.SceneManagement;
 public class LevelEndController : MonoBehaviour
 {
     public string nextScene;
-    void Start()
-    {
-        
-    }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
-            Debug.Log("LEvelcompleted");
+            Debug.Log("LEvel completed");
+            LevelManager.Instance.MarkCurrentLevelCompleted();
             SceneManager.LoadScene(nextScene);
         }
     }

@@ -11,7 +11,7 @@ public class LobbyController : MonoBehaviour
 
     private void Start()
     {
-        startButton.onClick.AddListener(ClickedStart);
+        //startButton.onClick.AddListener(ClickedStart);
         quitButton.onClick.AddListener(ClickedQuit);
     }
 
