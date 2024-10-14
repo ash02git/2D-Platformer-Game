@@ -17,6 +17,7 @@ public class FallDeathController : MonoBehaviour
         {
             Debug.Log("Player Fell to Death");
 
+            SoundManager.Instance.Play(Sounds.PlayerDeath);
             PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
             pc.KillPlayer();
 

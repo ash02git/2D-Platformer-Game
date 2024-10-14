@@ -11,16 +11,18 @@ public class LobbyController : MonoBehaviour
 
     private void Start()
     {
-        //startButton.onClick.AddListener(ClickedStart);
+        startButton.onClick.AddListener(ClickedStart);
         quitButton.onClick.AddListener(ClickedQuit);
     }
 
     private void ClickedStart()
     {
-        SceneManager.LoadScene(1);
+        SoundManager.Instance.Play(Sounds.ButtonClick);
+        //SceneManager.LoadScene(1);
     }
     private void ClickedQuit()
     {
+        SoundManager.Instance.Play(Sounds.ButtonClick);
         Application.Quit();
     }
 }
