@@ -44,11 +44,11 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetFloat("speed", Mathf.Abs(horizontalValue));
         Vector3 scale = transform.localScale;
-        if (horizontalValue == 1 || horizontalValue==-1)
+        if (horizontalValue <0)
         {
             scale.x = -Mathf.Abs(scale.x);
         }
-        else if (horizontalValue == 0)
+        else if (horizontalValue >0)
         {
             scale.x = Mathf.Abs(scale.x);
         }
@@ -70,11 +70,11 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 position = transform.position;
 
-        if(horizontal > 0)
+        if(horizontal == 1 || horizontal == -1 )
         {
             SoundManager.Instance.PlayMoveement();
         }
-        else
+        else if(horizontal==0)
         {
             SoundManager.Instance.StopMovement();
         }
