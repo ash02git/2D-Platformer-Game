@@ -14,6 +14,7 @@ public class LevelEndController : MonoBehaviour
             Debug.Log("LEvel completed");
             LevelManager.Instance.MarkCurrentLevelCompleted();
             SceneManager.LoadScene(nextScene);
+            SoundManager.Instance.Play(Sounds.LevelEnd);
         }
     }
 }
